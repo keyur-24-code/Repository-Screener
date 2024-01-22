@@ -2,7 +2,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: lightgray;
+  background-color: #dcf2f1;
 }
 
 .loader {
@@ -32,6 +32,7 @@ body {
 header {
   text-align: center;
   padding: 1rem;
+  color: #365486;
 }
 
 header h1 {
@@ -63,13 +64,15 @@ header h1 {
   cursor: pointer;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  background-color: #bcf0fe;
+  color: #365486;
 }
 
 .user-card {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #bcf0fe;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 }
@@ -81,6 +84,7 @@ header h1 {
 .user-avatar-section,
 .user-details-section {
   margin-bottom: 20px;
+  color: #365486;
 }
 
 .user-details-section a {
@@ -120,6 +124,7 @@ header h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   overflow: hidden;
+  background-color: #dcf2f1;
 }
 
 .repo-name {
@@ -131,12 +136,13 @@ header h1 {
 
 .repository-box p {
   text-transform: capitalize;
+  color: #365486;
 }
 
 .languages-box {
   display: flex;
   justify-content: space-around;
-  background-color: #f0f0f0; /* Set the background color */
+  background-color: #bcf0fe; /* Set the background color */
   padding: 10px;
   margin-top: 10px;
   text-align: center;
