@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+}
+
+#logo {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.search-bar {
+  display: flex;
+  max-width: 800px;
+  margin: 20px auto;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.search-bar button {
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.user-card {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.user-info-section {
+  display: flex;
+}
+
+.user-avatar-section,
+.user-details-section {
+  margin-bottom: 20px;
+}
+
+.user-details-section a {
+  display: block;
+}
+
+.avatar-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.avatar-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.user-details-section {
+  margin-left: 20px;
+}
+
+.repositories-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.repositories-section .repository-box {
+  border: 3px solid black;
+  padding: 10px;
+  width: 48%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.repository-box h3 {
+  color: rgb(2, 81, 190);
+  text-transform: capitalize;
+}
+
+.repository-box p {
+  text-transform: capitalize;
+}
+
+.languages-box {
+  display: flex;
+  justify-content: space-around;
+  background-color: #f0f0f0; /* Set the background color */
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+.languages-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.languages-box li {
+  display: inline-block;
+  background-color: rgb(2, 81, 190); /* Set the background color */
+  color: #fff;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagination-section {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination-button {
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #45a049;
+}
+
+.pagination-button.active {
+  background-color: #45a049;
+}
