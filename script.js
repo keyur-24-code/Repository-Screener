@@ -36,6 +36,17 @@ const displayUserDetails = (user) => {
   main.innerHTML = userCard;
 };
 
+// loader functionality
+const loader = document.getElementById("loader");
+
+function showLoader() {
+  loader.style.display = "block";
+}
+
+function hideLoader() {
+  loader.style.display = "none";
+}
+
 // add click event at the saerch button
 userSearch.addEventListener("click", (e) => {
   e.preventDefault();
@@ -49,6 +60,7 @@ userSearch.addEventListener("click", (e) => {
 // function for fetch user
 const getUser = async (username) => {
   try {
+    showLoader();
     const rawData = await fetch(baseURL + username);
     const data = await rawData.json();
     getRepositories(username);
@@ -59,18 +71,23 @@ const getUser = async (username) => {
     } else {
       console.error("Error fetching user:", error);
     }
+  } finally {
+    hideLoader();
   }
 };
 
 // function for fetch user's repositories
 const getRepositories = async (username) => {
   try {
+    showLoader();
     const rawData = await fetch(baseURL + username + "/repos?sort=created");
     const data = await rawData.json();
     displayUserRepositories(data);
   } catch (error) {
     console.error("Error fetching repositories:", error);
     alert("Problem fetching Repositories!");
+  } finally {
+    hideLoader();
   }
 };
 
