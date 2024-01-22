@@ -121,7 +121,8 @@ header h1 {
   border-radius: 20px;
 }
 
-.repository-box h3 {
+.repo-name {
+  font-size: 1.3rem;
   color: rgb(2, 81, 190);
   text-transform: capitalize;
 }

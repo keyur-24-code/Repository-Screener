@@ -107,7 +107,8 @@ async function createRepositoryBox(repo) {
   const repoBox = document.createElement("div");
   repoBox.classList.add("repository-box");
 
-  const repoName = document.createElement("h3");
+  const repoName = document.createElement("p");
+  repoName.classList.add("repo-name");
   repoName.textContent = repo.name;
   repoBox.appendChild(repoName);
 
