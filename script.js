@@ -36,6 +36,11 @@ const displayUserDetails = (user) => {
   main.innerHTML = userCard;
 };
 
+const createErrorCard = (message) => {
+  const cardHTML = `<div class="user-card"><h2>${message}</h2></div>`;
+  main.innerHTML = cardHTML;
+};
+
 // loader functionality
 const loader = document.getElementById("loader");
 
@@ -63,13 +68,14 @@ const getUser = async (username) => {
     showLoader();
     const rawData = await fetch(baseURL + username);
     const data = await rawData.json();
-    getRepositories(username);
     displayUserDetails(data);
+    getRepositories(username);
   } catch (error) {
-    if (error.response && error.response.status === 404) {
-      alert("No Profile with this Username");
+    console.log(error);
+    if (error.message === "Not Found") {
+      console.log("No Profile with this Username");
     } else {
-      console.error("Error fetching user:", error);
+      console.log("Error fetching User");
     }
   } finally {
     hideLoader();
@@ -84,8 +90,7 @@ const getRepositories = async (username) => {
     const data = await rawData.json();
     displayUserRepositories(data);
   } catch (error) {
-    console.error("Error fetching repositories:", error);
-    alert("Problem fetching Repositories!");
+    createErrorCard("Error fetching repositories");
   } finally {
     hideLoader();
   }
