@@ -123,6 +123,7 @@ header h1 {
 
 .repo-name {
   font-size: 1.3rem;
+  font-weight: bolder;
   color: rgb(2, 81, 190);
   text-transform: capitalize;
 }
