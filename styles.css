@@ -13,7 +13,7 @@ body {
   height: 50px;
   animation: spin 1s linear infinite;
   position: fixed;
-  top: 50%;
+  top: 65%;
   left: 50%;
   margin-top: -25px;
   margin-left: -25px;
