@@ -192,14 +192,17 @@ header h1 {
   background-color: #45a049;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 490px) {
   .user-info-section {
     display: flex;
     flex-direction: column;
   }
 
+  .user-details-section {
+    overflow: hidden;
+  }
   .avatar-container {
-    width: 50%;
+    width: 200px;
     margin: 20px auto;
   }
 
