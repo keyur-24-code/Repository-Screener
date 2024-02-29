@@ -92,7 +92,7 @@ header h1 {
 }
 
 .avatar-container {
-  width: 100%;
+  width: 200px;
   height: 200px;
   overflow: hidden;
   border-radius: 50%;
